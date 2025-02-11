@@ -3,7 +3,13 @@ package Hoja_Trabajo_3;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RadixSort {
+public class RadixSort implements SortAlgorithm {
+
+    @Override
+    public List<Integer> sort(List<Integer> L) {
+        return RS(L);
+    }
+    
     private int findMax(List<Integer> list) {
         int max = list.get(0);
         for (int num : list) {

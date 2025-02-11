@@ -24,7 +24,7 @@ public class Main {
             System.out.println("3. Quick Sort");
             System.out.println("4. Radix Sort");
             System.out.println("5. Heap Sort");
-            System.out.println("6. Ejecutar Profiler")
+            System.out.println("6. Ejecutar Profiler");
             System.out.println("7. Salir");
             System.out.print("Opción: ");
 

@@ -2,7 +2,13 @@ package Hoja_Trabajo_3;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MergeSort {
+public class MergeSort implements SortAlgorithm{
+
+    @Override
+    public List<Integer> sort(List<Integer> L) {
+        return MS(L);
+    }
+
     public List<Integer> MS(List<Integer> list) {
         if (list.size() <= 1) {
             return list;

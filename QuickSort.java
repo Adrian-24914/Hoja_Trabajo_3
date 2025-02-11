@@ -2,9 +2,14 @@ package Hoja_Trabajo_3;
 import java.util.ArrayList;
 import java.util.List;
 
-public class QuickSort {
+public class QuickSort implements SortAlgorithm{
     private int qs = 0;
 
+    @Override
+    public List<Integer> sort(List<Integer> L) {
+        return QS(L);
+    }
+    
     public List<Integer> QS(List<Integer> L) {
         if (L.size() < 2) {
             return L;
