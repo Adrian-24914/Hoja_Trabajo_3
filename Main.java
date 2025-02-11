@@ -9,6 +9,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
+        //Lista para tener 2000 numeros aleatorios
         List<Integer> originalNumbers = new ArrayList<>();
         for (int i = 0; i < 2000; i++) {
             originalNumbers.add(random.nextInt(10000));
@@ -23,15 +24,21 @@ public class Main {
             System.out.println("3. Quick Sort");
             System.out.println("4. Radix Sort");
             System.out.println("5. Heap Sort");
-            System.out.println("6. Salir");
+            System.out.println("6. Ejecutar Profiler")
+            System.out.println("7. Salir");
             System.out.print("Opción: ");
 
             int opcion = scanner.nextInt();
 
-            if (opcion == 6) {
+            if (opcion == 7) {
                 continuar = false;
-                System.out.println("Saliendo del programa...");
+                System.out.println("Never gonna give you up, never gonna let you down");
                 break;
+            }
+
+            if (opcion == 6) {
+                Profiler.runProfiler();
+                continue;
             }
 
             List<Integer> numbers = new ArrayList<>(originalNumbers);
