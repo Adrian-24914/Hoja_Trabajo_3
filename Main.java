@@ -9,17 +9,14 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
-        // Generar una lista aleatoria de 2000 números
         List<Integer> originalNumbers = new ArrayList<>();
         for (int i = 0; i < 2000; i++) {
-            originalNumbers.add(random.nextInt(10000)); // Números aleatorios entre 0 y 9999
+            originalNumbers.add(random.nextInt(10000));
         }
 
-        // Bandera para controlar el bucle del menú
         boolean continuar = true;
 
         while (continuar) {
-            // Mostrar el menú
             System.out.println("\nSeleccione el tipo de ordenamiento:");
             System.out.println("1. Insertion Sort");
             System.out.println("2. Merge Sort");
@@ -32,12 +29,11 @@ public class Main {
             int opcion = scanner.nextInt();
 
             if (opcion == 6) {
-                continuar = false; // Cambiar la bandera para salir del bucle
+                continuar = false;
                 System.out.println("Saliendo del programa...");
                 break;
             }
 
-            // Crear una copia de la lista original para cada algoritmo
             List<Integer> numbers = new ArrayList<>(originalNumbers);
 
             long startTime, endTime;
@@ -46,7 +42,7 @@ public class Main {
                 case 1: // Insertion Sort
                     InsertionSort insertionSort = new InsertionSort();
                     startTime = System.nanoTime();
-                    numbers = insertionSort.sort(numbers);
+                    numbers = insertionSort.IS(numbers);
                     endTime = System.nanoTime();
                     System.out.println("Insertion Sort completado. Tiempo: " + (endTime - startTime) + " nanosegundos");
                     break;
@@ -54,7 +50,7 @@ public class Main {
                 case 2: // Merge Sort
                     MergeSort mergeSort = new MergeSort();
                     startTime = System.nanoTime();
-                    numbers = mergeSort.sort(numbers);
+                    numbers = mergeSort.MS(numbers);
                     endTime = System.nanoTime();
                     System.out.println("Merge Sort completado. Tiempo: " + (endTime - startTime) + " nanosegundos");
                     break;
@@ -62,7 +58,7 @@ public class Main {
                 case 3: // Quick Sort
                     QuickSort quickSort = new QuickSort();
                     startTime = System.nanoTime();
-                    numbers = quickSort.sort(numbers);
+                    numbers = quickSort.QS(numbers);
                     endTime = System.nanoTime();
                     System.out.println("Quick Sort completado. Tiempo: " + (endTime - startTime) + " nanosegundos");
                     break;
@@ -70,7 +66,7 @@ public class Main {
                 case 4: // Radix Sort
                     RadixSort radixSort = new RadixSort();
                     startTime = System.nanoTime();
-                    numbers = radixSort.sort(numbers);
+                    numbers = radixSort.RS(numbers);
                     endTime = System.nanoTime();
                     System.out.println("Radix Sort completado. Tiempo: " + (endTime - startTime) + " nanosegundos");
                     break;
@@ -78,7 +74,7 @@ public class Main {
                 case 5: // Heap Sort
                     HeapSort heapSort = new HeapSort();
                     startTime = System.nanoTime();
-                    numbers = heapSort.sort(numbers);
+                    numbers = heapSort.HS(numbers);
                     endTime = System.nanoTime();
                     System.out.println("Heap Sort completado. Tiempo: " + (endTime - startTime) + " nanosegundos");
                     break;

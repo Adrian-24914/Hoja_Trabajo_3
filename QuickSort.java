@@ -5,16 +5,16 @@ import java.util.List;
 public class QuickSort {
     private int qs = 0;
 
-    public List<Integer> QS(List<Integer> L){
-        if (L.size() < 2){
+    public List<Integer> QS(List<Integer> L) {
+        if (L.size() < 2) {
             return L;
         } 
-        else{
+        else {
             int e = L.get(0);
             List<Integer> L1 = new ArrayList<>();
             List<Integer> L2 = new ArrayList<>();
 
-            for (int i = 1; i < L.size(); i++){
+            for (int i = 1; i < L.size(); i++) {
                 qs++;
                 if (L.get(i) < e) {
                     L1.add(L.get(i));
