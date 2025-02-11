@@ -74,7 +74,7 @@ public class Main {
                 case 5: // Heap Sort
                     HeapSort heapSort = new HeapSort();
                     startTime = System.nanoTime();
-                    numbers = heapSort.HS(numbers);
+                    numbers = heapSort.sort(numbers);
                     endTime = System.nanoTime();
                     System.out.println("Heap Sort completado. Tiempo: " + (endTime - startTime) + " nanosegundos");
                     break;
